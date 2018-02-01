@@ -1,0 +1,15 @@
+{
+  "name": "osd600",
+  "version": "1.0.0",
+  "description": "Assignment 1 for OSD600",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2",
+    "google-libphonenumber": "^3.0.10"
+  }
+}
