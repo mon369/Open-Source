@@ -6,11 +6,17 @@
   <body>
     <h1>Welcome!  How to use this app?</h1>
     <p>To use this app, there are two API endpoints you can follow</p>
+    <h2>By Param GET Request</h2>
     <p>https://osd600.herokuapp.com/api/phonenumbers/parse/text/[phone number you want to validate and format] <br>
         Example: .../api/phonenumbers/parse/text/Seneca Phone 416-491-5050 <br>
         And it should return an array, containing a formatted phone number. <br>
         If the phone you submitted in not valid, an error message will show accordingly<br>
     </p> 
-    
+
+
+    <h2>Upload a Text file</h2>
+    <p>Upload a text file <a href="/api/phonenumbers/parse/file">HERE</a></p>
+    <p>NOTE: You can use the text file provided on my GitHub named "numbers.txt"</p>
+    <p>It will return an array of formatted valid Phone Numbers</p>
   </body>
 </html>
