@@ -19,6 +19,7 @@ const upload = multer({ storage: storage });
 
 app.get("/api/phonenumbers/parse/text/:parse", (req, res) => {
     let phoneNumber = req.params.parse.match(PATTERN);
+    
     phoneNumber = phoneNumber.join("");
     let phone = [];
     parser.parse(phoneNumber).then((formattedNumber) => {
