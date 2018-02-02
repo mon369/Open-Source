@@ -19,7 +19,6 @@ const upload = multer({ storage: storage });
 
 app.get("/api/phonenumbers/parse/text/:parse", (req, res) => {
     let phoneNumber = req.params.parse.match(PATTERN);
-    
     phoneNumber = phoneNumber.join("");
     let phone = [];
     parser.parse(phoneNumber).then((formattedNumber) => {
@@ -60,9 +59,15 @@ app.post("/api/phonenumbers/parse/file", upload.single("parse"), (req, res) => {
     fs.unlinkSync(filePathToRead);
 })
 
-app.use("*", (req, res) => {
-    res.status(404).send("Can't Find What you're looking for");
+
+app.get("/", (req, res) =>{
+    res.sendFile(__dirname + "/views/index.html");
 })
+
+app.use("*", (req, res) => {
+    res.status(301).redirect("/");
+})
+
 app.listen(HTTP_PORT, () => {
     console.log("Running " + HTTP_PORT)
 })
