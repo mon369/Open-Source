@@ -17,3 +17,11 @@ module.exports.parse = function (phoneNumber){
         }
     })
 }
+
+module.exports.parseFile = function(data){
+
+    return new Promise((resolve, reject) =>{
+        
+
+    })
+}

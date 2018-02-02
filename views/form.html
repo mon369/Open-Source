@@ -1,11 +1,23 @@
 <!doctype html>
-
 <html>
-
-<head></head>
-
-<body>
-    <h3>Form HTML</h3>
-</body>
-
+  <head>
+    <style>
+      input {
+        margin: 4px;
+        width: 250px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Upload a parse to file</h1>
+    <h2>Note: Only .txt files is supported as of now</h2>
+    
+    <div style="text-align:right;width:400px;border:1px dashed #6495de;padding:16px;">
+      <form action="/api/phonenumbers/parse/file" method="POST" enctype="multipart/form-data">
+        <label for="parse">Text file</label>
+        <input id="parse" type="file" name="parse"/><br />
+        <input type="submit" value="Submit File" />
+      </form>
+    </div>
+  </body>
 </html>
