@@ -5,23 +5,6 @@ This is a simple Node/Express application that parses, validates, and displays p
 ## Updates
 As of February 4, 2018, unit testing using [Jest](https://facebook.github.io/jest/) and [Supertest](https://www.npmjs.com/package/supertest)  have been implemented 
 
-## Bugs and Issues
-
-Line 43-44 in [app.js](app.js): Parsing the [numbers.txt](numbers.txt) file produces an array of strings splitted with the '\n' delimeter, however also retains a carriage return '\r' in the output as follows.  This bug needs to be fixed in order to sanitize the original data from unintended characters.
-
-```
-[ 'hello from the other side\r',
-  'hello\r',
-  'can you\r',
-  'hear me\r',
-  '4161234567\r',
-  '1112223333\r',
-  '4164915050\r',
-  '9052721441\r',
-  '6479237466\r',
-  '0011aaaaaa' ]
-```
-
 ## To-do
 - [x] Implement unit testing with [Jest](https://facebook.github.io/jest/) and [Supertest](https://www.npmjs.com/package/supertest) for various GET / endpoints.
 - [ ] Continue implementing unit testing for POST /api/phonenumbers/parse/file/{file} endpoint.
