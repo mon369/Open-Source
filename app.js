@@ -41,6 +41,7 @@ app.get("/api/phonenumbers/parse/file", (req, res) => {
 app.post("/api/phonenumbers/parse/file", upload.single("parse"), (req, res) => {
     let filePathToRead = path.join(__dirname, "uploads", req.file.filename)
     let fileContent = fs.readFileSync(filePathToRead, "UTF8").split('\n');
+    console.log(fileContent);
     var filteredNumbers = [];
     if (fileContent) {
         for (line = 0; line < fileContent.length; line++) {
