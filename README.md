@@ -31,4 +31,6 @@ npm start or node index.js
 ## Interacting with the application
 Upon running the application, you will be taken to a homepage with details how to interact with the two API endpoints:
 
-1. GET 
+1. GET https://osd600.herokuapp.com/api/phonenumbers/parse/text/
+   - d
+2. GET https://osd600.herokuapp.com/api/phonenumbers/parse/file/
