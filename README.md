@@ -7,7 +7,7 @@ As of February 4, 2018, unit testing using Jest and Supertest have been implemen
 
 ## To-do
 - [x] Implement unit testing with Jest and Supertest for various GET / endpoints.
-- [ ] Continue implementing unit testing for POST ../file/{file} endpoint.
+- [ ] Continue implementing unit testing for POST /api/phonenumbers/parse/file/{file} endpoint.
 - [ ] Reconstruct front-end to a React, Angular, or a Vue application.  Decision will be made once the previous to-do's have been completed.
 
 ## Working Demo on Heroku
