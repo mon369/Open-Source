@@ -39,4 +39,11 @@ Upon running the application, you will be taken to a homepage with details how t
 ## Unit Testing
 [Jest](https://facebook.github.io/jest/) is an open source unit testing framework by Facebook used to test Javascript codes.  It was developed with the philosophy of providing a "zero configuration" experience that allows developers to have a better testing experience.
 
-Both Jest and Supertest are already included in the development dependencies, therefore not needing to install them.  To run the tests, simply type
+Both Jest and Supertest are already included in the development dependencies, therefore not needing to install them.  To run the tests, simply follow this command:
+```
+npm test
+```
+And the results should output as follows:
+```
+test
+```
