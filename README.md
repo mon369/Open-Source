@@ -34,7 +34,9 @@ Upon running the application, you will be taken to a homepage with details how t
 
 1. GET https://osd600.herokuapp.com/api/phonenumbers/parse/text/
    - Submit a phone number through the endpoint's parameter.  For example:
-     - /text/SenecaCollege4164915050 - this is a valid phone number
+     - ```
+         /text/SenecaCollege4164915050 - this is a valid phone number
+       ```
      - /text/Hello - this will return an empty list [{}] as no numbers can be found
      - /text/1234567890 - this is not a valid phone number, and response will be an error message
 2. GET https://osd600.herokuapp.com/api/phonenumbers/parse/file/
