@@ -6,9 +6,9 @@ This is a simple Node/Express application that parses, validates, and displays p
 As of February 4, 2018, unit testing using Jest and Supertest have been implemented 
 
 ## To-do
-[] Implement unit testing with Jest and Supertest for various GET / endpoints.
-[] Continue implementing unit testing for POST ../file/{file} endpoint.
-[] Reconstruct front-end to a React, Angular, or a Vue application.  Decision will be made once the previous to-do's have been completed.
+- [x] Implement unit testing with Jest and Supertest for various GET / endpoints.
+- [ ] Continue implementing unit testing for POST ../file/{file} endpoint.
+- [ ] Reconstruct front-end to a React, Angular, or a Vue application.  Decision will be made once the previous to-do's have been completed.
 
 ## Working Demo on Heroku
 https://osd600.herokuapp.com
