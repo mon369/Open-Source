@@ -15,6 +15,7 @@ https://osd600.herokuapp.com
 
 ## Setting up your environment
 In order for this application to work, you must have the latest [NodeJS](https://nodejs.org/en/download/) framework installed.
+[Visual Studio Code](https://code.visualstudio.com/) is the recommended IDE as it is being used for the current development of this application.
 
 ## Running the application locally
 This application will run locally using port 8080.
@@ -34,3 +35,8 @@ Upon running the application, you will be taken to a homepage with details how t
 1. GET https://osd600.herokuapp.com/api/phonenumbers/parse/text/
    - d
 2. GET https://osd600.herokuapp.com/api/phonenumbers/parse/file/
+
+## Unit Testing
+[Jest](https://facebook.github.io/jest/) is an open source unit testing framework by Facebook used to test Javascript codes.  It was developed with the philosophy of providing a "zero configuration" experience that allows developers to have a better testing experience.
+
+Both Jest and Supertest are already included in the development dependencies, therefore not needing to install them.  To run the tests, simply type
