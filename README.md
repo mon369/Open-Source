@@ -14,7 +14,8 @@ As of February 4, 2018, unit testing using [Jest](https://facebook.github.io/jes
 https://osd600.herokuapp.com
 
 ## Setting up your environment
-In order for this application to work, you must have the latest [NodeJS](https://nodejs.org/en/download/) framework installed.
+- In order for this application to work, you must have the latest [NodeJS](https://nodejs.org/en/download/) framework installed.
+- [Visual Studio Code](https://code.visualstudio.com/) is the recommended IDE as it is being used for the current development of this application.
 
 ## Running the application locally
 This application will run locally using port 8080.
@@ -34,3 +35,32 @@ Upon running the application, you will be taken to a homepage with details how t
 1. GET https://osd600.herokuapp.com/api/phonenumbers/parse/text/
    - d
 2. GET https://osd600.herokuapp.com/api/phonenumbers/parse/file/
+
+## Unit Testing
+[Jest](https://facebook.github.io/jest/) is an open source unit testing framework by Facebook used to test Javascript codes.  It was developed with the philosophy of providing a "zero configuration" experience that allows developers to have a better testing experience.
+
+Both Jest and Supertest are already included in the development dependencies, therefore not needing to install them.  To run the tests, simply follow this command:
+```
+npm test
+```
+And the results should output as follows:
+```
+PASS __tests__\server-test.js
+  Testing '/' route
+    √ GET '/' should respond with Status 200 (34ms)
+  Testing /parse/text/ endpoint
+    √ GET /api/phonenumbers/parse/text should expect 200 and a How To Page (4ms)
+  Testing /parse/text/:phone endpoint
+    √ GET /api/phonenumbers/parse/text/Seneca College 416-491-5050 is valid (7ms)
+    √ GET /api/phonenumbers/parse/text/Seneca College +1 416-491-5050 (with +1 int'l code) is valid (3ms)
+    √ GET /api/phonenumbers/parse/text/Hello should return an empty [{}] because no numbers were found (2ms)
+    √ GET /api/phonenumbers/parse/text/1234567890 is invalid (2ms)
+  Testing /parse/file/ endpoint
+    √ GET /api/phonenumbers/parse/file should expect 200 and a form to upload a file (3ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        1.006s
+Ran all test suites.
+```
