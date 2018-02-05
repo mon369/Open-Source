@@ -45,5 +45,22 @@ npm test
 ```
 And the results should output as follows:
 ```
-test
+PASS __tests__\server-test.js
+  Testing '/' route
+    √ GET '/' should respond with Status 200 (34ms)
+  Testing /parse/text/ endpoint
+    √ GET /api/phonenumbers/parse/text should expect 200 and a How To Page (4ms)
+  Testing /parse/text/:phone endpoint
+    √ GET /api/phonenumbers/parse/text/Seneca College 416-491-5050 is valid (7ms)
+    √ GET /api/phonenumbers/parse/text/Seneca College +1 416-491-5050 (with +1 int'l code) is valid (3ms)
+    √ GET /api/phonenumbers/parse/text/Hello should return an empty [{}] because no numbers were found (2ms)
+    √ GET /api/phonenumbers/parse/text/1234567890 is invalid (2ms)
+  Testing /parse/file/ endpoint
+    √ GET /api/phonenumbers/parse/file should expect 200 and a form to upload a file (3ms)
+
+Test Suites: 1 passed, 1 total
+Tests:       7 passed, 7 total
+Snapshots:   0 total
+Time:        1.006s
+Ran all test suites.
 ```
