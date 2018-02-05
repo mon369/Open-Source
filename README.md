@@ -7,7 +7,7 @@ As of February 4, 2018, unit testing using [Jest](https://facebook.github.io/jes
 
 ## Bugs and Issues
 
-Line 43-44 in [app.js](app.js): Parsing the file, produces an array of strings splitted with the '\n' delimeter, however also retains a carriage return '\r' in the output as follows.  This bug needs to be fixed in order to sanitize the original data from unintended characters.
+Line 43-44 in [app.js](app.js): Parsing the [numbers.txt](numbers.txt) file produces an array of strings splitted with the '\n' delimeter, however also retains a carriage return '\r' in the output as follows.  This bug needs to be fixed in order to sanitize the original data from unintended characters.
 
 ```
 [ 'hello from the other side\r',
@@ -94,6 +94,3 @@ Snapshots:   0 total
 Time:        1.006s
 Ran all test suites.
 ```
-
-## Bugs
-To be updated
