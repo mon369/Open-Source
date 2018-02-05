@@ -34,8 +34,6 @@ app.get("/api/phonenumbers/parse/text/:phone", (req, res) => {
     })
 })
 
-
-
 app.get("/api/phonenumbers/parse/file", (req, res) => {
     res.sendFile(__dirname + "/views/form.html");
 })
