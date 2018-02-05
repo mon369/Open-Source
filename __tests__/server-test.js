@@ -20,9 +20,9 @@ describe("Testing /parse/text/ endpoint", () =>{
     test("GET /api/phonenumbers/parse/text should expect 200 and a How To Page", ()=>{
         return request(app)
         .get('/api/phonenumbers/parse/text/')
-        expect('Content-Type', /html/)
-        expect(200)
+        .expect('Content-Type', /html/)
         .then(response =>{
+            expect(response.status).toBe(200);
             expect(response.text).toMatch(
                 /How to use this API endpoint/
             )
@@ -64,6 +64,18 @@ describe("Testing /parse/text/:phone endpoint", ()=>{
         .then((response) =>{
             expect(response.status).toBe(200);
             expect(response.text).toMatch(/Phone is invalid/);
+        })
+    })
+})
+
+describe("Testing /parse/file/ endpoint", () =>{
+    test("GET /api/phonenumbers/parse/file should expect 200 and a form to upload a file", ()=>{
+        return request(app)
+        .get('/api/phonenumbers/parse/file')
+        .expect('Content-Type', /html/)
+        .then((response) =>{ 
+            expect(response.status).toBe(200);
+            expect(response.text).toMatch(/<title>Upload a file<\/title>/);
         })
     })
 })
