@@ -16,7 +16,14 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-app.get("/api/phonenumbers/parse/text/:parse", (req, res) => {
+
+app.get("/api/phonenumbers/parse/text/", (req, res) => {
+    res.status(200).sendFile(path.join(__dirname,"views","howto.html"))
+})
+
+
+
+app.get("/api/phonenumbers/parse/text/:parse*", (req, res) => {
     let phoneNumber = req.params.parse.match(PATTERN);
     phoneNumber = phoneNumber.join("");
     let phone = [];
@@ -28,6 +35,7 @@ app.get("/api/phonenumbers/parse/text/:parse", (req, res) => {
         res.send(phone);
     })
 })
+
 
 
 app.get("/api/phonenumbers/parse/file", (req, res) => {
