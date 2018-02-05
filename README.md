@@ -38,7 +38,7 @@ Upon running the application, you will be taken to a homepage with details how t
      - /text/Hello - this will return an empty list [{}] as no numbers can be found
      - /text/1234567890 - this is not a valid phone number, and response will be an error message
 2. GET https://osd600.herokuapp.com/api/phonenumbers/parse/file/
-   - This endpoint will prompt for a file upload containing a list of strings and numbers and through filtering and validations will return a formatted list of all the valid phone numbers found.  You can use the numbers.txt provided in this package.
+   - This endpoint will prompt for a file upload containing a list of strings and numbers and through filtering and validations will return a formatted list of all the valid phone numbers found.  You can use the [numbers.txt](numbers.txt) provided in this package.
 
 ## Unit Testing
 [Jest](https://facebook.github.io/jest/) is an open source unit testing framework by Facebook used to test Javascript codes.  It was developed with the philosophy of providing a "zero configuration" experience that allows developers to have a better testing experience.
