@@ -8,6 +8,7 @@ As of February 4, 2018, unit testing using [Jest](https://facebook.github.io/jes
 ## To-do
 - [x] Implement unit testing with [Jest](https://facebook.github.io/jest/) and [Supertest](https://www.npmjs.com/package/supertest) for various GET / endpoints.
 - [ ] Continue implementing unit testing for POST /api/phonenumbers/parse/file/{file} endpoint.
+- [ ] Improve the following HTML files: HomePage, How To, and Upload a File
 - [ ] Reconstruct front-end to a React, Angular, or a Vue application.  Decision will be made once the previous to-do's have been completed.
 
 ## Working Demo on Heroku
@@ -34,15 +35,15 @@ Upon running the application, you will be taken to a homepage with details how t
 
 1. GET https://osd600.herokuapp.com/api/phonenumbers/parse/text/
    - Submit a phone number through the endpoint's parameter.  For example:
-      ```
-         /text/SenecaCollege4164915050 - this is a valid phone number
-      ```
+     ```
+     /text/SenecaCollege4164915050 - this is a valid phone number
+     ```
      ```
      /text/Hello - this will return an empty list [{}] as no numbers can be found
      ```
      ```
-      /text/1234567890 - this is not a valid phone number, and response will be an error message
-      ```
+     /text/1234567890 - this is not a valid phone number, and response will be an error message
+     ```
 2. GET https://osd600.herokuapp.com/api/phonenumbers/parse/file/
    - This endpoint will prompt for a file upload containing a list of strings and numbers and through filtering and validations will return a formatted list of all the valid phone numbers found.  You can use the [numbers.txt](numbers.txt) provided in this package.
 
@@ -76,5 +77,4 @@ Ran all test suites.
 ```
 
 ## Bugs
-
-## Future Plans
+To be updated
