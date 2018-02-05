@@ -9,7 +9,9 @@ As of February 4, 2018, unit testing using [Jest](https://facebook.github.io/jes
 - [x] Implement unit testing with [Jest](https://facebook.github.io/jest/) and [Supertest](https://www.npmjs.com/package/supertest) for various GET / endpoints.
 - [ ] Continue implementing unit testing for POST /api/phonenumbers/parse/file/{file} endpoint.
 - [ ] Improve the following HTML files: HomePage, How To, and Upload a File
+- [ ] Provide support for Word Documents, and PDF files for file parsing.
 - [ ] Reconstruct front-end to a React, Angular, or a Vue application.  Decision will be made once the previous to-do's have been completed.
+
 
 ## Working Demo on Heroku
 https://osd600.herokuapp.com
