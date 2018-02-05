@@ -15,17 +15,15 @@ const storage = multer.diskStorage({
 })
 
 const upload = multer({ storage: storage });
-
-
 app.get("/api/phonenumbers/parse/text/", (req, res) => {
-    res.status(200).sendFile(path.join(__dirname,"views","howto.html"))
+    res.status(200).sendFile(path.join(__dirname, "views", "howto.html"))
 })
 
-
-
-app.get("/api/phonenumbers/parse/text/:parse*", (req, res) => {
-    let phoneNumber = req.params.parse.match(PATTERN);
-    phoneNumber = phoneNumber.join("");
+app.get("/api/phonenumbers/parse/text/:phone", (req, res) => {
+    let phoneNumber = req.params.phone.match(PATTERN);
+    if (phoneNumber) {
+        phoneNumber = phoneNumber.join("");
+    }
     let phone = [];
     parser.parse(phoneNumber).then((formattedNumber) => {
         phone.push(formattedNumber);
@@ -47,27 +45,27 @@ app.post("/api/phonenumbers/parse/file", upload.single("parse"), (req, res) => {
     let fileContent = fs.readFileSync(filePathToRead, "UTF8").split('\n');
     var filteredNumbers = [];
     if (fileContent) {
-        for(line = 0; line < fileContent.length; line++){
+        for (line = 0; line < fileContent.length; line++) {
             let number = (fileContent[line].match(PATTERN));
-            if(number){
+            if (number) {
                 number = number.join("");
                 filteredNumbers.push(number);
             }
-        }            
+        }
         parser.parseFile(filteredNumbers).then((validPhones) => {
             console.log(validPhones);
             res.send(validPhones);
         }).catch((err) => {
             res.send(err);
         })
-    }else{
+    } else {
         res.status(404).send("Error: File is empty");
     }
     fs.unlinkSync(filePathToRead);
 })
 
 
-app.get("/", (req, res) =>{
+app.get("/", (req, res) => {
     res.sendFile(__dirname + "/views/index.html");
 })
 
