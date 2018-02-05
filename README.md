@@ -3,10 +3,10 @@
 This is a simple Node/Express application that parses, validates, and displays phone numbers using Google's [libphonenumber](https://github.com/googlei18n/libphonenumber) library.
 
 ## Updates
-As of February 4, 2018, unit testing using Jest and Supertest have been implemented 
+As of February 4, 2018, unit testing using (Jest)[https://facebook.github.io/jest/] and (Supertest)[https://www.npmjs.com/package/supertest]  have been implemented 
 
 ## To-do
-- [x] Implement unit testing with Jest and Supertest for various GET / endpoints.
+- [x] Implement unit testing with (Jest)[https://facebook.github.io/jest/] and (Supertest)[https://www.npmjs.com/package/supertest] for various GET / endpoints.
 - [ ] Continue implementing unit testing for POST /api/phonenumbers/parse/file/{file} endpoint.
 - [ ] Reconstruct front-end to a React, Angular, or a Vue application.  Decision will be made once the previous to-do's have been completed.
 
