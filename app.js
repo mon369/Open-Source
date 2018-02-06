@@ -40,7 +40,7 @@ app.get("/api/phonenumbers/parse/file", (req, res) => {
 
 app.post("/api/phonenumbers/parse/file", upload.single("parse"), (req, res) => {
     let filePathToRead = path.join(__dirname, "uploads", req.file.filename)
-    let fileContent = fs.readFileSync(filePathToRead, "UTF8").split('\n');
+    var fileContent = fs.readFileSync(filePathToRead, "UTF8").match(/[^\r\n]+/g);
     console.log(fileContent);
     var filteredNumbers = [];
     if (fileContent) {
@@ -52,7 +52,7 @@ app.post("/api/phonenumbers/parse/file", upload.single("parse"), (req, res) => {
             }
         }
         parser.parseFile(filteredNumbers).then((validPhones) => {
-            console.log(validPhones);
+            //console.log(validPhones);
             res.send(validPhones);
         }).catch((err) => {
             res.send(err);
