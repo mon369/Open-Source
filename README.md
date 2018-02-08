@@ -36,7 +36,7 @@ npm start or node index.js
 Upon running the application, you will be taken to a homepage with details how to interact with the two API endpoints:
 
 1. GET https://osd600.herokuapp.com/api/phonenumbers/parse/text/
-   - Submit a phone number through the endpoint's parameter.  For example:
+   - Submit a phone number through the endpoint's URI.  For example:
      ```
      /text/SenecaCollege4164915050 - this is a valid phone number
      ```
